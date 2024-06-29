@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin'); //помогает работать с html-файлами и добавляет в них ссылку на бандл
+const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin'); //очищает папку dist от старых файлов
 
 module.exports = {
     entry: {
@@ -27,6 +28,7 @@ module.exports = {
     plugins: [
         new HtmlPlugin({
             template: './public/index.html'
-        })
+        }),
+        new CleanPlugin(),
     ]
 }
