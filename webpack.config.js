@@ -12,19 +12,6 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
 
-    devServer: {
-        static: {
-            directory: path.resolve(__dirname, './public'),
-        },
-        port: 3300,
-        client: {
-            overlay: {
-                errors: false,
-                warnings: false,
-            }
-        }
-    },
-
     module: {
         rules: [
             {
